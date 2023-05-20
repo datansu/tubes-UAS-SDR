@@ -75,8 +75,8 @@ if selected == "Prediksi":
     ok = st.button ("Prediksi")
 
     if ok:
-      x_new = [[GREScore, TOEFLScore, UniversityRating, SOP, LOR, CGPA,
-       Research]]
+      x_new = [[int(GREScore), int(TOEFLScore), int(UniversityRating), float(SOP), float(LOR), float(CGPA),
+       int(Research)]]
       result = xgb.predict(x_new)
       if result == 0:
         st.subheader("No")
